@@ -1,30 +1,56 @@
 /* Seu CSS existente permanece inalterado */
 section {
     display: flex;
-    height: 100vh;
     justify-content: center;
     /* Centraliza o conteúdo horizontalmente */
     align-items: center;
     /* Centraliza o conteúdo verticalmente */
     font-family: monospace;
     font-size: 25px;
+    padding: 20px;
+    
 }
 
 body {
     font-family: Helvetica;
     margin: 0;
     padding: 0;
-    border-color: black;
     background-image: url("binario-wallpaper.jpg");
     background-size: cover;
     /* Para ajustar a imagem ao tamanho da tela */
     background-repeat: no-repeat;
     /* Para não repetir a imagem */
     background-attachment: fixed;
-    color: #ffffff;
-}
+    color: #ffffff;}
 
-/* Estilos para a barra de navegação */
+    /* Para telas menores, ajuste o tamanho da fonte e o espaçamento */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-text .welcome-text {
+        font-size: 36px;
+    }
+
+    .header-text p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .habilidade-item img {
+        max-width: 100px;
+        /* Reduza o tamanho das imagens */
+    }
+
+    .legenda {
+        font-size: 14px;
+    }
+}
 /* Estilos para a barra de navegação */
 nav {
     position: fixed;
@@ -132,6 +158,16 @@ section {
 #projetos,
 #habilidades {
     display: none;
+}
+/* Ajuste o espaçamento em telas menores */
+@media (max-width: 768px) {
+    .habilidades-container {
+        gap: 10px;
+    }
+
+    .habilidade-item {
+        margin: 5px;
+    }
 }
 
 /* Estilos para habilidades */
