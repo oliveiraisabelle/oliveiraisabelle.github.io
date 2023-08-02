@@ -1,0 +1,149 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio" onclick="showSection('inicio')">Início</a></li>
+            <li><a href="#sobre" onclick="showSection('sobre')">Sobre Mim</a></li>
+            <li><a href="#projetos" onclick="showSection('projetos')">Projetos</a></li>
+            <li><a href="#habilidades" onclick="showSection('habilidades')">Habilidades</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <section id="inicio">
+                <div class="header-content">
+                    <img src="avatar2.png" alt="Imagem de cabeçalho">
+                    <div class="header-text">
+                        <h1 class="welcome-text">Seja bem-vindo(a) ao meu Portfólio!</h1>
+                        <p>Olá! Meu nome é Isabelle Oliveira Santos e este é o meu portfólio de programação.</p>
+                    </div>
+                </div>
+        </header>
+        </section>
+
+        <section id="sobre" style="display: none;">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-mim">
+                <p>Fâ da programação e começando minha jornada no mundo da tecnologia.
+                <p>Atualmente faço o tecnólogo de Analise e Desenvolvimento de sistemas, sempre tive uma facilidade
+                    quando se tratava de tecnologia e acabei pegando gosto e resolvi seguir
+                    na área.</p>
+                <p>Esse portfólio tem o intuito de mostrar os projetos que estarei desenvolvendo, minhas habilidades e
+                    tecnologias.</p>
+        </section>
+
+        <section id="projetos" style="display: none;">
+            <h2>Projetos</h2>
+            <p>Aqui estão alguns dos projetos que desenvolvi durante minha jornada na programação:</p>
+            <ul>
+                <li>Projeto 1 - [Em breve]</li>
+                <li>Projeto 2 - [Em breve]</li>
+                <li>Projeto 3 - [Em breve]</li>
+            </ul>
+        </section>
+
+        <section id="habilidades" style="display: none;">
+            <h2>Habilidades e tecnologias</h2>
+            <div class="habilidades-container">
+                <div class="coluna-habilidade">
+                    <!-- Primeira coluna de habilidades -->
+                    <div class="habilidade-item">
+                        <!-- Imagem e legenda da habilidade 1 -->
+                        <img align="center" alt="Isabelle-Js" height="100" width="100"
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+                        <p class="legenda">JavaScript</p>
+                    </div>
+                    <div class="habilidade-item">
+                        <!-- Imagem e legenda da habilidade 2 -->
+                        <img align="center" alt="Isabelle-Html" height="100" width="100"
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+                        <p class="legenda">HTML</p>
+                    </div>
+                </div>
+                <div class="coluna-habilidade">
+                    <!-- Segunda coluna de habilidades -->
+                    <div class="habilidade-item">
+                        <!-- Imagem e legenda da habilidade 3 -->
+                        <img align="center" alt="Isabelle-java" height="100" width="100"
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg">
+                        <p class="legenda">Java</p>
+                    </div>
+                    <div class="habilidade-item">
+                        <!-- Imagem e legenda da habilidade 4 -->
+                        <img align="center" alt="Isabelle-oracle" height="100" width="100"
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+                        <p class="legenda">C#</p>
+                    </div>
+                </div>
+                <div class="coluna-habilidade">
+                    <!-- Terceira coluna de habilidades -->
+                    <div class="habilidade-item">
+                        <!-- Imagem e legenda da habilidade 5 -->
+                        <img align="center" alt="Isabelle-Css" height="100" width="100"
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+                        <p class="legenda">CSS</p>
+                    </div>
+                    <div class="habilidade-item">
+                        <!-- Imagem e legenda da habilidade 6 -->
+                        <img align="center" alt="Isabelle-vscode" height="100" width="100"
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg">
+                        <p class="legenda">Vscode</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="rodape">
+                    <p>Contato: oliveira.zabelle@gmail.com</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/isabelle-oliveira-santos" target="_blank">Meu
+                            Perfil</a></p>
+                </div>
+            </footer>
+        </section>
+
+
+        <script> function showSection(sectionId) {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+
+                });
+            }
+            function showWelcomeScreen() {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    if (section.id === 'inicio') {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+            window.addEventListener('scroll', function () {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    // Exibir o menu apenas quando a seção estiver a meio caminho da janela
+                    if (sectionTop < windowHeight / 2) {
+                        section.style.display = 'block';
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>

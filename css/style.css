@@ -1,0 +1,215 @@
+/* Seu CSS existente permanece inalterado */
+section {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    font-family: monospace;
+    font-size: 25px;
+}
+
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    border-color: black;
+    background-image: url("binario-wallpaper.jpg");
+    background-size: cover;
+    /* Para ajustar a imagem ao tamanho da tela */
+    background-repeat: no-repeat;
+    /* Para não repetir a imagem */
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+/* Estilos para a barra de navegação */
+/* Estilos para a barra de navegação */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #cdd4e928;
+    color: #fff;
+    border-color: black;
+    z-index: 999; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Alinhar à direita */
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00ccff;
+}
+
+nav a.active {
+    color: #00ccff;
+}
+
+header {
+    padding: 50px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #fff;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-content img {
+    max-width: 1500px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: right;
+}
+
+.header-content h1 {
+    animation: blink 2s infinite;
+    /* Adiciona a animação "blink" no texto */
+}
+
+
+.header-text .welcome-text {
+    font-size: 48px;
+    /* Aumentar o tamanho do texto */
+}
+
+/* Definindo a animação "blink" */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        /* O texto é totalmente opaco no início e no final da animação */
+    }
+
+    50% {
+        opacity: 0;
+        /* O texto fica totalmente transparente no meio da animação, simulando o piscar */
+    }
+}
+
+.header-text p {
+    font-family: monospace;
+    /* Mudar a fonte para Arial */
+    font-size: 25px;
+    /* Ajuste o valor conforme desejado */
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 60px;
+}
+
+#sobre,
+#projetos,
+#habilidades {
+    display: none;
+}
+
+/* Estilos para habilidades */
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente as colunas */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.coluna-habilidade {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    /* Centraliza horizontalmente os itens dentro de cada coluna */
+}
+
+.habilidade-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin: 10px;
+}
+
+.habilidade-item img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para a seção Habilidades */
+#habilidades {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.habilidades-titulo {
+    margin-bottom: 20px;
+}
+
+.legenda {
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: verdana;
+    color: bisque;
+}
+
+
+footer {
+    background-color: #cdd4e928;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    padding: 20px 0;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+    color: #f8f8fa;
+    font-weight: bold;
+}
+
+.rodape a {
+    color: rgb(241, 241, 247);
+    /* Cor do link */
+}
+
+.rodape a:hover {
+    color: red;
+    /* Cor do link quando passar o mouse por cima */
+}
